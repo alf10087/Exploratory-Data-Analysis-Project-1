@@ -23,9 +23,10 @@ hpc$Date <- as.POSIXct(paste(hpc$Date, hpc$Time), format="%Y-%m-%d %H:%M:%S")
 with(hpc, plot(Date, c(Sub_metering_1), ylab = "Energy sub metering", xlab = "", type = "l"))
 with(hpc, points(Date, Sub_metering_2, col = "Red", type = "l"))
 with(hpc, points(Date, Sub_metering_3, col = "Blue", type = "l"))
-legend("topright", lty = c(1, 1, 1), col = c("black", "blue", "red"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex = 0.8, cex.axis = 0.8)
+legend("topright", lty = c(1, 1, 1), col = c("black", "blue", "red"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex = 0.8)
 
 # Save the plot as PNG
 
 dev.copy(png, file = "plot3.png")
 dev.off()
+
